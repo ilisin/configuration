@@ -15,7 +15,7 @@ const (
 	// config with file
 	CTFileConf ConfigType = iota
 	// config with etcd
-	CTEtcd
+	//CTEtcd
 	// path
 	CTEnv
 	// unsupport config type

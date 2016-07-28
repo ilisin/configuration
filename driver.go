@@ -15,7 +15,7 @@ type Driver struct {
 
 var confTypeM = map[ConfigType]string{
 	CTFileConf: "file",
-	CTEtcd:     "etcd",
+	//CTEtcd:     "etcd",
 	CTEnv:      "env",
 }
 
@@ -44,8 +44,8 @@ func (this *Driver) LoadProvider() (Provider, error) {
 	var err error = nil
 	if this.Type == CTFileConf {
 		this.Provider = NewFileProvider(this.ContextParam)
-	} else if this.Type == CTEtcd {
-		this.Provider = NewEtcdProvider(this.ContextParam)
+	//} else if this.Type == CTEtcd {
+	//	this.Provider = NewEtcdProvider(this.ContextParam)
 	} else if this.Type == CTEnv {
 		this.Provider = NewEnvProvider()
 	} else {
